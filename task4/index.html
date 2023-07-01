@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+
+    <script>
+
+var arr = [1, 2, 3];
+
+
+
+function getLength(arr) {
+  return arr.length;
+}
+
+function getFirst(arr) {
+  return arr[0];
+}
+
+function getLast(arr) {
+  return arr[arr.length - 1];
+}
+
+function pushElement(arr, element) {
+  arr.push(element);
+  return arr;
+}
+
+function popElement(arr) {
+  arr.pop();
+  return arr;
+}
+
+
+console.log(getLength(arr));     // Output: 3
+console.log(getFirst(arr));      // Output: 1
+console.log(getLast(arr));       // Output: 3
+console.log(pushElement(arr, 4)); // Output: [1, 2, 3, 4]
+console.log(popElement(arr));     // Output: [1, 2, 3]
+
+
+    </script>
+
+
+</body>
+
+</html>
