@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+
+
+  <script>
+
+function pickIt(arr) {
+  var odd = [];
+  var even = [];
+
+  for (var i = 0; i < arr.length; i++) {
+    if (arr[i] % 2 === 0) {
+      even.push(arr[i]); // If the element is even, push it to the even array
+    } else {
+      odd.push(arr[i]); // If the element is odd, push it to the odd array
+    }
+  }
+
+  return [odd, even];
+}
+
+
+
+  </script>
+
+
+</body>
+
+</html>

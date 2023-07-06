@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+
+
+  <script>
+
+    function rgb(r, g, b) {
+      // Helper function to clamp a value between 0 and 255
+      function clamp(value) {
+        return Math.max(0, Math.min(value, 255));
+      }
+
+      // Convert decimal values to hexadecimal strings and pad them with zeros if necessary
+      function decimalToHex(value) {
+        var hex = value.toString(16).toUpperCase();
+        return hex.length === 1 ? "0" + hex : hex;
+      }
+
+      // Clamp RGB values and convert them to hexadecimal
+      var red = decimalToHex(clamp(r));
+      var green = decimalToHex(clamp(g));
+      var blue = decimalToHex(clamp(b));
+
+      // Return the concatenated hexadecimal representation
+      return red + green + blue;
+    }
+
+  </script>
+
+
+</body>
+
+</html>

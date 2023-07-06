@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+
+
+  <script>
+
+function narcissistic(value) {
+  const numStr = value.toString();
+  const n = numStr.length;
+  let sum = 0;
+
+  for (let i = 0; i < n; i++) {
+    const digit = parseInt(numStr[i]);
+    sum += Math.pow(digit, n);
+  }
+
+  return value === sum;
+}
+
+
+
+  </script>
+
+
+</body>
+
+</html>

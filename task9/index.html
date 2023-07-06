@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+
+
+  <script>
+    
+function padIt(str, n) {
+  let paddedStr = str; // Initialize paddedStr with the original string
+  let i = 1; // Initialize the loop counter
+
+  while (i <= n) {
+    if (i % 2 === 0) {
+      // If i is even, add a * to the right side of the string
+      paddedStr = paddedStr + "*";
+    } else {
+      // If i is odd, add a * to the left side of the string
+      paddedStr = "*" + paddedStr;
+    }
+
+    i++; // Increment the loop counter
+  }
+
+  return paddedStr;
+}
+
+
+  </script>
+
+
+</body>
+
+</html>

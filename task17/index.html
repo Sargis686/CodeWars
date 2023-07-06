@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+
+
+  <script>
+
+function giveMeFive(obj) {
+  var result = [];
+
+  for (var key in obj) {
+    if (key.length === 5) {
+      result.push(key);
+    }
+
+    if (obj[key].length === 5) {
+      result.push(obj[key]);
+    }
+  }
+
+  return result;
+}
+
+
+  </script>
+
+
+</body>
+
+</html>
