@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+
+
+  <script>
+
+    
+    function alienLanguage(str) {
+      let words = str.split(" "); // Split the sentence into words
+
+      // Translate each word into alien language
+      for (let i = 0; i < words.length; i++) {
+        let word = words[i];
+        let lastLetter = word.slice(-1); // Get the last letter
+        let remainingLetters = word.slice(0, -1); // Get the remaining letters
+
+        // Capitalize the remaining letters and convert the last letter to lowercase
+        let translatedWord = remainingLetters.toUpperCase() + lastLetter.toLowerCase();
+        words[i] = translatedWord;
+      }
+
+      // Join the translated words back into a sentence
+      let translatedSentence = words.join(" ");
+
+      return translatedSentence;
+    }
+
+
+  </script>
+
+
+</body>
+
+</html>

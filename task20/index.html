@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+
+
+  <script>
+    
+function cutIt(arr) {
+  let shortestLength = arr[0].length; // Initialize with the length of the first string
+
+  // Find the shortest string length
+  for (let i = 1; i < arr.length; i++) {
+    if (arr[i].length < shortestLength) {
+      shortestLength = arr[i].length;
+    }
+  }
+
+  // Intersect all strings to the shortest length
+  let result = arr.map((str) => str.substring(0, shortestLength));
+
+  return result;
+}
+
+  </script>
+
+
+</body>
+
+</html>

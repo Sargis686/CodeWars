@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+
+
+  <script>
+    
+    function splitAndMerge(string, separator) {
+  let words = string.split(" "); // Split the string into words
+  let mergedWords = [];
+
+  // Split each word into separate characters and join them with the separator
+  for (let i = 0; i < words.length; i++) {
+    let characters = words[i].split("");
+    let mergedWord = characters.join(separator);
+    mergedWords.push(mergedWord);
+  }
+
+  // Join all the resulting "words" back into a sentence with spaces
+  let result = mergedWords.join(" ");
+
+  return result;
+}
+
+
+  </script>
+
+
+</body>
+
+</html>

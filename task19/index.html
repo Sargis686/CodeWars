@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+
+
+  <script>
+function howManySmaller(arr, n) {
+  var count = 0;
+
+  // Keep all elements in the array with two decimal places
+  var roundedArray = arr.map(function(element) {
+    return Number(element.toFixed(2));
+  });
+
+  // Count the number of elements smaller than n
+  for (var i = 0; i < roundedArray.length; i++) {
+    if (roundedArray[i] < n) {
+      count++;
+    }
+  }
+
+  return count;
+}
+
+// Example usage:
+console.log(howManySmaller([1.234, 1.235, 1.228], 1.24));     // Output: 2
+console.log(howManySmaller([1.1888, 1.1868, 1.1838], 1.19));  // Output: 1
+console.log(howManySmaller([3.1288, 3.1212, 3.1205], 3.1212));// Output: 1
+
+  </script>
+
+
+</body>
+
+</html>
