@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+
+
+  <script>
+
+function fiveLine(s) {
+  s = s.trim(); // Remove leading and trailing whitespace
+
+  let result = '';
+
+  for (let i = 1; i <= 5; i++) {
+    result += `${s.repeat(i)}\n`;
+  }
+
+  return result.trim(); // Remove trailing newline and whitespace
+}
+
+// Example usage:
+console.log(fiveLine('s'));     // Output:
+                              // s
+                              // ss
+                              // sss
+                              // ssss
+                              // sssss
+
+console.log(fiveLine('hello')); // Output:
+                              // hello
+                              // hellohello
+                              // hellohellohello
+                              // hellohellohellohello
+                              // hellohellohellohellohello
+
+console.log(fiveLine('  abc  ')); // Output:
+                               // abc
+                               // abcabc
+                               // abcabcabc
+                               // abcabcabcabc
+                               // abcabcabcabcabc
+
+
+
+  </script>
+
+
+</body>
+
+</html>

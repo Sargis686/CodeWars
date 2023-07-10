@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+
+
+  <script>
+
+function roundIt(n) {
+  const [leftDigits, rightDigits] = n.toString().split('.');
+  const leftLength = leftDigits.length;
+  const rightLength = rightDigits.length;
+
+  if (leftLength < rightLength) {
+    return Math.ceil(n);
+  } else if (leftLength > rightLength) {
+    return Math.floor(n);
+  } else {
+    return Math.round(n);
+  }
+}
+
+// Example usage:
+console.log(roundIt(3.45));    // Output: 4
+console.log(roundIt(34.5));    // Output: 34
+console.log(roundIt(34.56));   // Output: 35
+console.log(roundIt(123.456)); // Output: 123
+console.log(roundIt(0.5));     // Output: 1
+
+
+  </script>
+
+
+</body>
+
+</html>

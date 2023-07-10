@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+
+
+  <script>
+
+function generateHashtag(str) {
+  if (str === '' || str.trim() === '') {
+    return false;
+  }
+
+  const words = str.split(' ');
+  const capitalizedWords = words.map(word => word.charAt(0).toUpperCase() + word.slice(1));
+
+  const hashtag = '#' + capitalizedWords.join('');
+
+  if (hashtag.length > 140) {
+    return false;
+  }
+
+  return hashtag;
+}
+
+// Example usage:
+console.log(generateHashtag('hello world'));                  // Output: "#HelloWorld"
+console.log(generateHashtag('hello    world'));              // Output: "#HelloWorld"
+console.log(generateHashtag('   hello    world   '));         // Output: "#HelloWorld"
+console.log(generateHashtag('openAI is awesome'));            // Output: "#OpenAIIsAwesome"
+console.log(generateHashtag('coding'));                       // Output: "#Coding"
+console.log(generateHashtag('a'.repeat(140)));                // Output: "#A" followed by 139 "#" characters
+console.log(generateHashtag('a'.repeat(141)));                // Output: false
+console.log(generateHashtag(''));                             // Output: false
+console.log(generateHashtag('   '));                          // Output: false
+
+
+
+  </script>
+
+
+</body>
+
+</html>
